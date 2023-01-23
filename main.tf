@@ -1,9 +1,6 @@
 # resource "google_compute_engine" "default"{
 #     name =""
 # }
-# resource "google_compute_engine" "default"{
-#     name =""
-# }
 
 
 
@@ -24,14 +21,14 @@ resource "google_compute_subnetwork" "default" {
 
 # Create a single Compute Engine instance
 resource "google_compute_instance" "default" {
-  name         = "flask-vm"
+  name         = "ishita-vm"
   machine_type = "f1-micro"
-  zone         = "us-west1-a"
+  zone         = "us-west4-b"
   tags         = ["ssh"]
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-11"
+      image = "ubuntu-cloud/ubuntu-latest"
     }
   }
 }
