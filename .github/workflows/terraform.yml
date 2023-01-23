@@ -30,8 +30,8 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      - name: Setup GCP Service Account google-github-actions/setup-gcloud@master
-        uses: google-github-actions/setup-gcloud@master
+      - name: Setup GCP Service Account google-github-actions/setup-gcloud@main
+        uses: google-github-actions/setup-gcloud@main
         with:
           version: 'latest'
           service_account_email: ${{secrets.GCP_SA_EMAIL}}
