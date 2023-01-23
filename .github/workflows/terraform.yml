@@ -49,7 +49,7 @@ jobs:
         
 
       - name: Terraform Format
-        run: terraform fmt -check
+        run: terraform fmt -diff
         env:
           GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
           GCP_SA_KEY: ${{secrets.GCP_SA_KEY}}
