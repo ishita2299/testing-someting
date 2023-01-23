@@ -1,6 +1,9 @@
 # resource "google_compute_engine" "default"{
 #     name =""
 # }
+# resource "google_compute_engine" "default"{
+#     name =""
+# }
 
 
 
@@ -17,19 +20,23 @@ resource "google_compute_subnetwork" "default" {
   region        = "us-west1"
   network       = google_compute_network.vpc_network.id
 }
+
+
 # Create a single Compute Engine instance
 resource "google_compute_instance" "default" {
-  name         = "Ishita-vm"
+  name         = "flask-vm"
   machine_type = "f1-micro"
   zone         = "us-west1-a"
   tags         = ["ssh"]
 
   boot_disk {
     initialize_params {
-      image = "ubuntu-cloud/debian-11"
+      image = "debian-cloud/debian-11"
     }
   }
-  resource "google_compute_firewall" "ssh" {
+}
+
+resource "google_compute_firewall" "ssh" {
   name = "allow-ssh"
   allow {
     ports    = ["22"]
