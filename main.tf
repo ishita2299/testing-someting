@@ -23,6 +23,7 @@ resource "google_compute_instance" "default" {
   machine_type = "f1-micro"
   zone         = "us-west1-a"
   tags         = ["ssh"]
+}
 
   boot_disk {
     initialize_params {
