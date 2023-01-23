@@ -10,4 +10,10 @@ resource "null_resource" "git_clone" {
   }
 }
 
+resource "google_project_service" "appengine" {
+	project="ishita-project-15565"
+	service="appengine.googleapis.com"
+	disable_dependent_services=true
+}
+
 
