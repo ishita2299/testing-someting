@@ -1,12 +1,3 @@
-# resource "google_compute_engine" "default"{
-#     name =""
-# # }
-
-# variable "gcp_credentials" {
-#   type = string
-#   sensitive = true
-#   description = "Google Cloud service account credentials"
-# }
 
 resource "null_resource" "git_clone" {
   provisioner "local-exec" {
@@ -15,12 +6,11 @@ resource "null_resource" "git_clone" {
   }
 }
 
-
 provider "google" {
-  project     = "ishita-project-15565"
-  region      = "us-west1"
-  zone        = "us-west1-a"
-  credentials = "${file("ishita-project-15565-6bb5efd6ec5f.json")}"
+  project     = "var.project_id"
+  region      = "var.region"
+  credentials = var.GCP_SA_KEY
+  # zone        = "us-west1-a"
 
 }
 
@@ -32,10 +22,6 @@ terraform {
     }
   }
 }
-
-# provider "mycloud" {
-#   # ...
-# }
 
 
 resource "google_project_service" "appengine" {
