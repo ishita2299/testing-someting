@@ -1,2 +1,2 @@
 project_id = "ishita-project-15565"
-region     = "us-west4-b"
+region     = "us-west1-a"
