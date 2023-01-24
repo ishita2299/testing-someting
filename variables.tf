@@ -9,8 +9,8 @@ variable "region" {
 }
 
 variable "GCP_SA_KEY" {
-    type= string
-    sensitive =true
-    description = "key for google auth"
+   type= string
+   sensitive =true
+   description = "key for google auth"
   
 }
