@@ -20,7 +20,7 @@ provider "google" {
 
 terraform {
   required_providers {
-    mycloud = {
+    google = {
       source  = "registry.terraform.io/hashicorp/google"
       # version = "~> 1.0"
     }
