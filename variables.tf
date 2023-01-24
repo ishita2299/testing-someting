@@ -8,9 +8,9 @@ variable "region" {
   default = "us-west1-a"
 }
 
-# variable "GCP_SA_KEY" {
-#     type= string
-#     sensitive =true
-#     description = "key for google auth"
+variable "GCP_SA_KEY" {
+    type= string
+    sensitive =true
+    description = "key for google auth"
   
-# }
+}
