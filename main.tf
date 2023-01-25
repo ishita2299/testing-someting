@@ -1,3 +1,13 @@
+# resource "google_compute_engine" "default"{
+#     name =""
+# }
+
+
+# variable "gcp_credentials" {
+#   type = string
+#   sensitive = true
+#   description = "Google Cloud service account credentials"
+# }
 
 resource "null_resource" "git_clone" {
   provisioner "local-exec" {
@@ -6,21 +16,45 @@ resource "null_resource" "git_clone" {
   }
 }
 
+
 provider "google" {
   project     = "var.project_id"
   region      = "var.region"
-#   credentials = "var.GCP_SA_KEY"
+  command     = "gcloud auth application-default login"
+  # credentials = "${file("C:\Users\IRAJVAID\Downloads\ishita-project-15565-6bb5efd6ec5f.json")}"
+  # credentials = "var.GCP_SA_KEY"
+  # zone        = "us-west1-a"
 
 }
 
+
+
+# provider "google" {
+#   project     = "ishita-project-15565"
+#   region      = "us-west1"
+#   zone        = "us-west1-a"
+  
+#   # credentials = "${file("ishita-project-15565-6bb5efd6ec5f.json")}"
+
+# }
+
 terraform {
   required_providers {
-    google = {
+    mycloud = {
       source  = "registry.terraform.io/hashicorp/google"
       # version = "~> 1.0"
     }
   }
 }
+
+# provider "mycloud" {
+#   # ...
+# }
+
+
+
+
+
 
 
 resource "google_project_service" "appengine" {
@@ -28,4 +62,16 @@ resource "google_project_service" "appengine" {
 	service="appengine.googleapis.com"
 	disable_dependent_services=false
 }
+
+# resource "local-file "
+
+
+
+
+
+
+
+# metadata_startup_script = 
+
+
 
