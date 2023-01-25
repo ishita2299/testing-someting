@@ -1,6 +1,6 @@
 project_id = "ishita-project-15565"
 region     = "us-west1-a"
-GCP_SA_KEY = {
+ACCOUNT_KEY = {
   "type": "service_account",
   "project_id": "ishita-project-15565",
   "private_key_id": "6bb5efd6ec5f0649df8090f237a936d778d2f974",
