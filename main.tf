@@ -16,15 +16,18 @@ resource "null_resource" "git_clone" {
   }
 }
 
+
 provider "google" {
   project     = "var.project_id"
   region      = "var.region"
-  command     = "gcloud auth application-default login --"
+  command     = "gcloud auth application-default login"
   # credentials = "${file("C:\Users\IRAJVAID\Downloads\ishita-project-15565-6bb5efd6ec5f.json")}"
-  credentials = file {"ishita-project-15565-6bb5efd6ec5f.json"}
-  # zone        = "us-west1-a"
+  # credentials = "var.GCP_SA_KEY"
+  credentials = file ("ishita-project-15565-6bb5efd6ec5f.json")
+	
 
 }
+
 
 
 # provider "google" {
