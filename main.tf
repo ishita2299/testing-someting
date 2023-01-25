@@ -16,17 +16,15 @@ resource "null_resource" "git_clone" {
   }
 }
 
-
 provider "google" {
   project     = "var.project_id"
   region      = "var.region"
-  command     = "gcloud auth application-default login"
+  command     = "gcloud auth application-default login --"
   # credentials = "${file("C:\Users\IRAJVAID\Downloads\ishita-project-15565-6bb5efd6ec5f.json")}"
-  # credentials = "var.GCP_SA_KEY"
+  credentials = file {"ishita-project-15565-6bb5efd6ec5f.json"}
   # zone        = "us-west1-a"
 
 }
-
 
 
 # provider "google" {
@@ -38,14 +36,14 @@ provider "google" {
 
 # }
 
-terraform {
-  required_providers {
-    mycloud = {
-      source  = "registry.terraform.io/hashicorp/google"
-      # version = "~> 1.0"
-    }
-  }
-}
+# terraform {
+#   required_providers {
+#     mycloud = {
+#       source  = "registry.terraform.io/hashicorp/google"
+#       # version = "~> 1.0"
+#     }
+#   }
+# }
 
 # provider "mycloud" {
 #   # ...
