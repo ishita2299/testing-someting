@@ -9,8 +9,7 @@ resource "null_resource" "git_clone" {
 provider "google" {
   project     = "var.project_id"
   region      = "var.region"
-  credentials = "GCP_SA_KEY"
-  # zone        = "us-west1-a"
+  credentials = "var.GCP_SA_KEY
 
 }
 
