@@ -55,18 +55,18 @@ jobs:
           GCP_SA_KEY: ${{secrets.GCP_SA_KEY}}
 
       - name: Terraform Plan
-        run: terraform plan -input=false -out=terraplan.tf
+        run: terraform plan -input=false -out=terraplan.tf && terraform apply "terraplan.tf"
         env:
           GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
           GCP_SA_KEY: ${{secrets.GCP_SA_KEY}}
 
-      - name: Terraform Apply
-        id: apply
-        if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
-        run: terraform apply "terraplan.tf" 
-        env:
-          GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
-          GCP_SA_KEY: ${{secrets.GCP_SA_KEY}}
+#       - name: Terraform Apply
+#         id: apply
+#         if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
+#         run: terraform apply "terraplan.tf" 
+#         env:
+#           GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
+#           GCP_SA_KEY: ${{secrets.GCP_SA_KEY}}
 
      
       
