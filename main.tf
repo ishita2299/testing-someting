@@ -24,7 +24,7 @@ provider "google" {
   # credentials = "${file("C:\Users\IRAJVAID\Downloads\ishita-project-15565-6bb5efd6ec5f.json")}"
   # credentials = file ("ishita-project-15565-6bb5efd6ec5f.json")
   # zone        = "us-west1-a"
-  access_token = "ya29.a0AVvZVsq5qygSH01VXu0XF6sl_cb7zovpxBqgmUNldo6pPhZYNJCjGIfFqbJUQ8Zs2kLmU_1_PawgKmDtWrBFTX0ym5olXO3NPU8bHj6mK7YoyUwRH54suNuHbaKMiWsdHPFarToDbCqZKHLnamoHXKDlzl8jNyC_toamaCgYKAQASAQASFQGbdwaI0KAABOC7g_ELXyoBbd3MeQ0171"
+  access_token = "ya29.a0AVvZVspogyQrYMb9vlPmVXk_AkiTe9WGPI3-j0SQQFCFmLwc1Sn-okyZSAXAN2NdXY2TPoj3YHTBnVt_Kndk9c9nWn4WgVEKWPCb_deddRGl8hFmndwCJj3CwXKd04ab35NmL_jo3NgG9YtmKH_gO-Qt44jmOt6WSuG63gaCgYKAdkSAQASFQGbdwaIlTAAmxpl6ifYcCMM2H8RLg0173"
 
 }
 
