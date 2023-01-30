@@ -6,7 +6,7 @@ provider "google" {
 }
 
 resource "google_project_service" "appengine" {
-	project="ishita-project-15565"
+	project="singular-node-375112"
 	service="appengine.googleapis.com"
 	disable_dependent_services=false
 }
