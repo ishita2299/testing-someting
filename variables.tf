@@ -5,7 +5,7 @@ variable "project_id" {
 
 variable "region" {
   type    = string
-  default = "us-west1-a"
+  default = "europe-west2"
 }
 
 # variable "ACCOUNT_KEY" {
