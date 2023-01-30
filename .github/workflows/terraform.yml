@@ -68,9 +68,15 @@ jobs:
           
       - name: gcloud login
         run: gcloud auth login
+        env:
+          GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
+          GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}}
         
       - name: Login to App
         run: gcloud app deploy
+        env:
+          GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
+          GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}}
         
       - name: Install Python dependencies
         run: sudo apt-get update && sudo apt-get install python3.6
