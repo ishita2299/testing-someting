@@ -67,6 +67,9 @@ jobs:
           GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}}
       - name: Login to App
         run: gcloud app deploy
+        
+      - name: gcloud login
+        run: gcloud config set account singular-node-375112@appspot.gserviceaccount.com
           
           
       - name: Install Python dependencies
