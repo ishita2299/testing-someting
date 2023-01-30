@@ -65,6 +65,31 @@ jobs:
         env:
           GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
           GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}}
+      - name: Login to App
+        run: gcloud app deploy
+          
+          
+      - name: Install Python dependencies
+        run: sudo apt-get update && sudo apt-get install python3.6
+        env:
+          GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
+          GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}}
+      
+      
+      - name: installing GIT
+        run: sudo apt install git
+        env:
+          GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
+          GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}}
+      
+ 
+          
+      
+      - name: Git Clone
+        run: sudo mkdir Api-Project && git clone https://github.com/Legend-Sarthak/restframework-.git Api-Project
+        env:
+          GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
+          GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}} 
 
 #       - name: Terraform Apply
 #         id: apply
