@@ -13,7 +13,7 @@ provider "google" {
 
 
 
-resource "google_project_service" "appengine {
+resource "google_project_service" "appengine" {
 name          = "singular-node-375112"
 project       = "First App engine"
 location      = "europe-west2"
