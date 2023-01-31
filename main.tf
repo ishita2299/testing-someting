@@ -19,7 +19,7 @@ resource "google_project" "my_project" {
 }
 
 resource "google_app_engine_application" "app" {
-  project     = google_project.my_project.singular-node-375112
+  project     = google_project.singular_node.375112
   location_id = "europe-west2"
 }
 
