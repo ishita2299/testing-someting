@@ -6,7 +6,7 @@ provider "google" {
 }
 
 resource "google_project_service" "appengine" {
-	project="First App engine"
+	project="First-App-engine"
 	service="appengine.googleapis.com"
 	disable_dependent_services=false
 }
