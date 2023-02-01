@@ -74,6 +74,9 @@ jobs:
 #         env:
 #           GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
 #           GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}}
+      - name: gcloud set
+        run: gcloud config set account ishita@singular-node-375112.iam.gserviceaccount.com
+        
         
       - name: Login to App
         run: gcloud app deploy
