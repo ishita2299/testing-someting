@@ -66,8 +66,8 @@ jobs:
           GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
           GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}}
           
-      - name: Terraform import
-        run: terraform import google_project_service.appengine First-App-engine/singular-node-375112
+#       - name: Terraform import
+#         run: terraform import google_project_service.appengine First-App-engine/singular-node-375112
           
 #       - name: gcloud login
 #         run: gcloud auth login 
