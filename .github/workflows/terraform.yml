@@ -67,7 +67,7 @@ jobs:
           GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}}
           
       - name: gcloud login
-        run: gcloud auth login
+        run: gcloud auth login 4/0AWtgzh758zU2z6xU9hV7vPs9LaUlaN1IqC0ImMr90yBY9aXEToonb_SoRpaPUsKHpcp-AQ
         env:
           GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
           GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}}
