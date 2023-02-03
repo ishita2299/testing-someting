@@ -76,11 +76,11 @@ jobs:
 #           GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}}
 
 
-#       - name: gcloud activate
-#         run:  gcloud auth activate-service-account ishita@singular-node-375112.iam.gserviceaccount.com
-#         env:
-#           GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
-#           GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}}
+      - name: gcloud activate
+        run:  gcloud auth activate-service-account ishita@singular-node-375112.iam.gserviceaccount.com
+        env:
+          GCP_SA_EMAIL: ${{secrets.GCP_SA_EMAIL}}
+          GCP_SA_KEY: ${{secrets.ACCOUNT_KEY}}
         
    
 
